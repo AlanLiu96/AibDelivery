@@ -8,7 +8,7 @@ KIOSK = 1
 
 @app.route("/")
 def welcome():
-    return render_template('home.html')
+    return render_template('welcome.html')
 
 @app.route("/language/<lang>")
 def language(lang):
@@ -43,23 +43,12 @@ def takeorb():
 
 @app.route("/havefun")
 def havefun():
-    return render_template('havefun.html',language=session['language'], name=session['name'])
+    # return render_template('havefun.html',language=session['language'], name=session['name'])
+    return render_template('havefun.html',language='german', name='Alan')
 
 @app.route("/error")
 def error():
     return render_template('error.html', language='english')
-
-# @app.route("/name/<language>")
-# def name(language):
-#   if language == 'EN':
-#       return render_template('english_name.html')
-#   else:
-#       return render_template('home.html')
-
-# @app.route("/email")
-# def email():
-#     return render_template('home.html')
-
 
 # Post Request to [ALAN WILL PROVIDE LINK HERE]
 # Name (required), email (required), kiosk number (required)
