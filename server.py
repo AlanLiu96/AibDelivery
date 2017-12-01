@@ -1,11 +1,33 @@
 from flask import Flask, render_template # import redirect & session
 app = Flask(__name__)
 
-# session.name = 'Alan'
+session.name =
+session.language = 
 
-@app.route("/")
-def hello():
-    return render_template('float.html', name='Alan')
+@app.route("/welcome")
+def welcome():
+    return render_template('welcome.html')
+
+@app.route("/english")
+def english():
+    session.language = "EN"
+    return redirect(url_for('name'))
+
+@app.route("/name")
+def name():
+    return render_template('name.html')
+
+@app.route("/email")
+def email():
+    return render_template('email.html')
+
+@app.route("/takeorb")
+def takeorb():
+    return render_template('takeorb.html')
+
+@app.route("/havefun")
+def havefun():
+    return render_template('havefun.html')
 
 # @app.route("/name/<language>")
 # def name(language):
