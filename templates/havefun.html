@@ -15,6 +15,13 @@
 <h1>My First Heading</h1>
 
 <p>My first paragraph.</p>
+	
+<div class="ui one row stackable center aligned page grid">
+  <div class="column five wide">
+
+    <h1 class="ui header"><br><br><br><br><br><br><br><br>Enjoy your visit, {{name}}.<br><br><br></h1>
+
+  </div>
 
 {% if language=='english' %}
     {{name}} is sick.
@@ -25,14 +32,6 @@
 {% else %}
     Kenny looks okay --- so far
 {% endif %}
-
-<form action="/name" method="post" class="ui form">
-  <div class="field">
-    <label>Name</label>
-    <input type="text" name="name" placeholder="Name">
-  </div>
-  <button class="ui button" type="submit">Submit</button>
-</form>
 
 </body>
 </html>
