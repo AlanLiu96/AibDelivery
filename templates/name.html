@@ -1,12 +1,31 @@
 <!DOCTYPE html>
 <html>
+<head>
+
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.css">
+	<script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.js"></script>
+</head>
+
 <body>
 
-<h1>My First Heading</h1>
+<div class="ui two column centered grid">
+  <div class="column">
 
-<p>My first paragraph.</p>
+    <h1 class="ui header">Greetings!</h1>
 
-{{name}}
+    <form action="/name" method="post" class="ui form">
+      <div class="field">
+        <label>How may I call you?</label>
+        <input type="text" name="name" placeholder="Name">
+      </div>
+      <button class="ui button" type="submit">Submit</button>
+    </form>
+
+  </div>
 
 </body>
 </html>
