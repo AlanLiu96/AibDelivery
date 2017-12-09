@@ -3,7 +3,7 @@ import requests
 app = Flask(__name__)
 app.secret_key = 'A0Zr98j/3yX R~XHH!jmN]LWX/,?RAS@T'
 
-FIREBASE_URL = "firebase.com" # TODO(alan): Change this URL once the server is set up
+FIREBASE_URL = "https://us-central1-aib-object.cloudfunctions.net/userInfo" # TODO(alan): Change this URL once the server is set up
 KIOSK = 1
 
 @app.route("/")
