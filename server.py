@@ -41,10 +41,10 @@ def email():
 def takeorb():
     return render_template('takeorb.html', language=session['language'], name=session['name'])
 
-@app.route("/havefun")
-def havefun():
+#@app.route("/havefun")
+#def havefun():
     # return render_template('havefun.html',language=session['language'], name=session['name'])
-    return render_template('havefun.html',language='german', name='Alan')
+ #   return render_template('havefun.html',language='german', name='Alan')
 
 @app.route("/error")
 def error():
