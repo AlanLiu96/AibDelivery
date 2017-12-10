@@ -13,6 +13,7 @@
 
 <body>
 
+{% if language=='english' %}
 <div class="ui one row stackable center aligned page grid">
   <div class="column ten wide">
 
@@ -29,8 +30,148 @@
   </div>
 
 </body>
+{% elif language=='spanish' %}
+<div class="ui one row stackable center aligned page grid">
+  <div class="column ten wide">
 
-请留下您的邮箱，以便我们为您量身定制体验
+    <h1 class="ui header hi"><br><br><br><br><br><br>Hola {{name}}!<br><br><br></h1>
+
+    <form action="/email" method="post" class="ui form">
+      <div class="field email">
+        <label>Por favor, introduzca su correo electrónico para que podamos personalizar su experiencia.<br><br></label>
+        <input type="text" name="email" placeholder="Correo electrónico">
+      </div>
+      <button class="ui button" type="submit">Confirmar</button>
+    </form>
+
+  </div>
+
+</body>
+{% elif language=='french' %}
+<div class="ui one row stackable center aligned page grid">
+  <div class="column ten wide">
+
+    <h1 class="ui header hi"><br><br><br><br><br><br>Salut {{name}}!<br><br><br></h1>
+
+    <form action="/email" method="post" class="ui form">
+      <div class="field email">
+        <label>S'il vous plaît entrer votre email afin que nous puissions personnaliser votre expérience.<br><br></label>
+        <input type="text" name="email" placeholder="Email">
+      </div>
+      <button class="ui button" type="submit">Confirmer</button>
+    </form>
+
+  </div>
+
+</body>
+{% elif language=='german' %}
+<div class="ui one row stackable center aligned page grid">
+  <div class="column ten wide">
+
+    <h1 class="ui header hi"><br><br><br><br><br><br>Hallo {{name}}!<br><br><br></h1>
+
+    <form action="/email" method="post" class="ui form">
+      <div class="field email">
+        <label>Bitte geben Sie Ihre E-Mail-Adresse ein, damit wir Ihre Erfahrung personalisieren können.<br><br></label>
+        <input type="text" name="email" placeholder="E-Mail-Adresse">
+      </div>
+      <button class="ui button" type="submit">Bestätigen</button>
+    </form>
+
+  </div>
+
+</body>
+{% elif language=='portuguese' %}
+<div class="ui one row stackable center aligned page grid">
+  <div class="column ten wide">
+
+    <h1 class="ui header hi"><br><br><br><br><br><br>Olá {{name}}!<br><br><br></h1>
+
+    <form action="/email" method="post" class="ui form">
+      <div class="field email">
+        <label>Digite seu e-mail para que possamos personalizar sua experiência.<br><br></label>
+        <input type="text" name="email" placeholder="E-mail">
+      </div>
+      <button class="ui button" type="submit">Confirme</button>
+    </form>
+
+  </div>
+
+</body>
+{% elif language=='chinese' %}
+<div class="ui one row stackable center aligned page grid">
+  <div class="column ten wide">
+
+    <h1 class="ui header hi"><br><br><br><br><br><br>你好 {{name}}!<br><br><br></h1>
+
+    <form action="/email" method="post" class="ui form">
+      <div class="field email">
+        <label>请留下您的邮箱，以便我们为您量身定制体验<br><br></label>
+        <input type="text" name="email" placeholder="电子邮件">
+      </div>
+      <button class="ui button" type="submit">确认</button>
+    </form>
+
+  </div>
+
+</body>
+{% elif language=='japanese' %}
+<div class="ui one row stackable center aligned page grid">
+  <div class="column ten wide">
+
+    <h1 class="ui header hi"><br><br><br><br><br><br>こんにちは {{name}}!<br><br><br></h1>
+
+    <form action="/email" method="post" class="ui form">
+      <div class="field email">
+        <label>あなたの経験をパーソナライズできるようにメールを入力してください。<br><br></label>
+        <input type="text" name="email" placeholder="Eメール">
+      </div>
+      <button class="ui button" type="submit">確認</button>
+    </form>
+
+  </div>
+
+</body>
+{% elif language=='arabic' %}
+<div class="ui one row stackable center aligned page grid">
+  <div class="column ten wide">
+
+    <h1 class="ui header hi"><br><br><br><br><br><br>مرحبا {{name}}!<br><br><br></h1>
+
+    <form action="/email" method="post" class="ui form">
+      <div class="field email">
+        <label>يرجى إدخال بريدك الإلكتروني حتى نتمكن من تخصيص تجربتك.<br><br></label>
+        <input type="text" name="email" placeholder="البريد الإلكتروني">
+      </div>
+      <button class="ui button" type="submit">تؤكد</button>
+    </form>
+
+  </div>
+
+</body>
+
+{% elif language=='russian' %}
+<div class="ui one row stackable center aligned page grid">
+  <div class="column ten wide">
+
+    <h1 class="ui header hi"><br><br><br><br><br><br>Здравствуйте {{name}}!<br><br><br></h1>
+
+    <form action="/email" method="post" class="ui form">
+      <div class="field email">
+        <label>Пожалуйста, введите свой адрес электронной почты, чтобы мы могли персонализировать ваш опыт.<br><br></label>
+        <input type="text" name="email" placeholder="Эл. адрес">
+      </div>
+      <button class="ui button" type="submit">подтвердить</button>
+    </form>
+
+  </div>
+
+</body>
+{% else %}
+Something seems to have gone wrong. Please contact AIB staff and try again.
+{% endif %}
+
+
 
 </html>
 <script type="text/javascript">
