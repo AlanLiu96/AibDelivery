@@ -12,7 +12,7 @@ def welcome():
 
 @app.route("/language/<lang>")
 def language(lang):
-    if lang in ["english", "chinese", "french", "german", "spanish", "japanese"]:
+    if lang in ["english", "chinese", "french", "german", "spanish", "japanese","portuguese","arabic","russian"]:
         session['language'] = lang
     else:
         raise Exception("Language not found!")
