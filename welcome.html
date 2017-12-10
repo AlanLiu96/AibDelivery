@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.css">
+	<script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.js"></script>
+</head>
+	
+<style>
+div.fixed {
+    position: fixed;
+    bottom: 50%;
+}
+</style>
+	
+<body>
+
+<!--<div class="ui large image">
+	<img src="https://lh3.googleusercontent.com/qdgdS9dh9qL8SRBgoknijnRR2Q-nVbXeFd2yKH2f9ibufYpbG30M3-pjl4JDjOmuqzl52YRAcH-uWg=w1280-h676-rw">
+</div>-->
+
+
+<div class="ui one row stackable center aligned page grid">
+  <div class="fixed">
+  <div class="column five wide">
+
+    <h1 class="ui header welcome">Welcome to the AIB!</h1>
+
+</div>
+
+<div class='buttons'>
+<a href="/language/english">
+	<button class="ui button" onclick=flyOut()>Welcome</button>
+</a>
+<a href="/language/spanish">
+	<button class="ui button">Bienvenidos</button>
+</a>
+<a href="/language/french">
+	<button class="ui button">Bienvenue</button>
+</a>
+<a href="/language/german">
+	<button class="ui button">Willkomen</button>
+</a>
+<a href="/language/portuguese">
+	<button class="ui button">Bem-vindo</button>
+</a>
+<a href="/language/chinese">
+	<button class="ui button">欢迎</button>
+</a>
+<a href="/language/japanese">
+	<button class="ui button">いらしゃいます</button>
+</a>
+<a href="/language/arabic">
+	<button class="ui button">أهلا بك</button>
+</a>
+<a href="/language/russian">
+	<button class="ui button">Здравствуйте</button>
+</a>
+</div>
+</body>
+</html>
+
+<script type="text/javascript">
+$('.welcome')
+  .transition({animation: 'fly left in', duration: '1s'})
+;
+$('.buttons')
+  .transition({animation: 'fly right in', duration: '1s'})
+;
+function flyOut(){
+	$('.welcome')
+  .transition({animation: 'fly left out'})
+;
+$('.buttons')
+  .transition({animation: 'fly right out'})
+;
+}
+</script>

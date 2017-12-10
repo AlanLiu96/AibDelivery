@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.css">
+  <script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.js"></script>
+</head>
+
+<body>
+
+<div class="ui one row stackable center aligned page grid">
+  <div class="column ten wide">
+
+    <h1 class="ui header hi"><br><br><br><br><br><br>Hi {{name}}!<br><br><br></h1>
+
+    <form action="/email" method="post" class="ui form">
+      <div class="field email">
+        <label>Please enter your email so that we can personalize your experience.<br><br></label>
+        <input type="text" name="email" placeholder="Email">
+      </div>
+      <button class="ui button" type="submit">Confirm</button>
+    </form>
+
+  </div>
+
+</body>
+
+请留下您的邮箱，以便我们为您量身定制体验
+
+</html>
+<script type="text/javascript">
+setTimeout(function(){ location = "/"; },15000);
+$('.hi')
+  .transition({animation: 'fly left in', duration: '1s'})
+;
+$('.email')
+  .transition({animation: 'fly right in', duration: '1s'})
+;
+$('.button')
+  .transition({animation: 'fly right in', duration: '1s'})
+;
+</script>
